@@ -1,0 +1,79 @@
+@import url("/css/colors.css");
+
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.one-page {
+    background: url("../assets/img/main_background.gif") no-repeat;
+    background-size: contain;
+    background-position: 100%;
+    padding: 0px 20px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.one-page__logo-marcas{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one-page__logo-marcas span {
+    height: 42px;
+    border-right: 2px solid black;
+}
+
+.one-page__menu {
+    width: 500px;
+    padding: 48px;
+    margin-left: 10px;
+}
+
+.one-page__titulo {
+    color: var(--salmao);
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 10px;
+}
+
+.one-page__titulo>span {
+    color: var(--azul-magenta);
+}
+
+.menu__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item-link{
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #020240;
+    background: white;
+    text-align: center;
+    display: block;
+    padding: 14px 20px;
+    border-radius: 9px;
+    box-shadow: 2px 3px 10px 6px rgb(217 215 215);
+}
+
+.item-link:hover {
+    text-decoration: underline;
+    box-shadow: 0px 1px 15px 5px rgb(183, 183, 183);
+}
+

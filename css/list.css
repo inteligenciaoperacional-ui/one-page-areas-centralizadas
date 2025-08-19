@@ -1,0 +1,142 @@
+@import url("/css/colors.css");
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-home {
+    padding: 20px;
+}
+
+.inteligencia {
+    display: flex;
+    justify-content: space-around;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.inteligencia__menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    transform: rotate(120deg);
+    width: 100%;
+    height:10px;
+    
+}
+
+.row_ciano {
+    z-index: -1;
+    position: absolute;
+    top: 29%;
+    right: 23%;
+    background-color: var(--ciano);
+    transform: rotate(123deg);
+    opacity: 0.1;
+    height: 9px;
+    width: 100%;
+}
+.row_salmao {
+    z-index: -1;
+    position: absolute;
+    bottom: -6%;
+    right: 20%;
+    background-color: var(--salmao);
+    transform: rotate(53deg);
+    opacity: 0.1;
+    height: 9px;
+    width: 100%;
+}
+
+.inteligencia__menu,
+.grupojca__wallpaper {
+    width: 45%;
+}
+
+.inteligencia__titulo {
+    font-size: 62px;
+    color: var(--salmao);
+}
+
+.inteligencia__titulo>span {
+    color: var(--azul-magenta);
+}
+
+.menu__list {
+    height: 400px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.list-itens {
+    position: relative;
+}
+.list-itens>img {
+    width: 12%;
+    position: absolute;
+    left: 4%;
+    top: 49%;
+    transform: translateY(-49%);
+}
+
+.item-link {
+    background: white;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: bolder;
+    display: block;
+    padding: 28px 178px;
+    border: 1px solid;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 2px 2px 6px 1px #a5a5a5;
+}
+
+.item-link:hover {
+    text-decoration: underline;
+}
+
+.menu__list li:nth-child(1) .item-link {
+    color: var(--ciano);
+}
+
+.menu__list li:nth-child(2) .item-link {
+    color: var(--azul-magenta);
+}
+
+.menu__list li:nth-child(3) .item-link {
+    color: var(--salmao);
+}
+
+.btn-home {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon_io {
+    position: absolute;
+    right: 24px;
+    bottom: 34px;
+}
+
+.grupojca__wallpaper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grupojca__wallpaper>img {
+    width: 70%;
+}
