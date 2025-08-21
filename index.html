@@ -8,28 +8,123 @@
     <title>Inteligência Operacional</title>
 </head>
 <body>
-    <main class="one-page">
-        <div class="one-page__logo-marcas">
-            <img src="assets/img/logo_JCA_preto.png" alt="Logo empresa" width="80">
-            <span></span>
-            <img src="assets/img/logo_V1001.png" alt="Logo empresa V1001" width="50">
-            <img src="assets/img/logo_CAT.png" alt="Logo empresa Catarinense" width="80">
-            <img src="assets/img/logo_COM.png" alt="Logo empresa Cometa" width="80">
-            <img src="assets/img/logo_EXP.png" alt="Logo empresa Expresso do Sul" width="132">
-            <img src="assets/img/logo_RRP.png" alt="Logo empresa Rapido Ribeirão" width="68">
+    
+    <main class="one-page" id="background">
+        <div class="blur">
+            <div class="one-page__logo-marcas">
+                <img src="assets/img/logo_JCA_preto.png" alt="Logo empresa" width="80">
+                <span></span>
+                <img src="assets/img/logo_V1001.png" alt="Logo empresa V1001" width="50">
+                <img src="assets/img/logo_CAT.png" alt="Logo empresa Catarinense" width="80">
+                <img src="assets/img/logo_COM.png" alt="Logo empresa Cometa" width="80">
+                <img src="assets/img/logo_EXP.png" alt="Logo empresa Expresso do Sul" width="132">
+                <img src="assets/img/logo_RRP.png" alt="Logo empresa Rapido Ribeirão" width="68">
+            </div>
+            <div class="one-page__menu">
+                <h2 class="one-page__titulo">Áreas <br><span>Centralizadas</span></h2>
+                <ul class="menu__list">
+                    <li class="list-itens"><a class="item-link" href="pages/operacao/index.html">Operacão</a></li>
+                    <li class="list-itens"><a class="item-link" href="pages/comercial/index.html">Comercial</a></li>
+                </ul>
+            </div>
+            <img src="assets/img/icone_INT.png" alt="Icone Inteligência Operacional" width="46px">
         </div>
-        <div class="one-page__menu">
-            <h2 class="one-page__titulo">Áreas <br><span>Centralizadas</span></h2>
-            <ul class="menu__list">
-                <li class="list-itens"><a class="item-link" href="pages/inteligencia_op/index.html">Inteligência Operacional</a></li>
-                <li class="list-itens"><a class="item-link" href="pages/plan_motorista/index.html">Planejamento de Motoristas</a></li>
-                <li class="list-itens"><a class="item-link" href="pages/centro_controle_op/index.html">Centro de Controle Operacional</a></li>
-                <li class="list-itens"><a class="item-link" href="pages/plan_frota/index.html">Planejamento de Frota</a></li>
-                <li class="list-itens"><a class="item-link" href="pages/regularizacao_veiculos/index.html">Regularização de Veículos</a></li>
-                <li class="list-itens"><a class="item-link" href="pages/cadastros_op/index.html">Cadastros Operacionais</a></li>
-            </ul>
+        <div class="text-loop-container">
+            <div class="text-item active">Primeira mensagem</div>
+            <div class="text-item">Segunda mensagem</div>
+            <div class="text-item">Terceira mensagem</div>
         </div>
-        <img src="assets/img/icone_INT.png" alt="Icone Inteligência Operacional" width="46px">
     </main>
+<script>
+    const background = document.getElementById('background');
+
+    const imageUrls = [
+        'assets/img/background/v1001.png',
+        'assets/img/background/v1001_urb.png',
+        'assets/img/background/catarinense.png',
+        'assets/img/background/cometa.png',
+        'assets/img/background/rapido_ribeirao.png',
+        'assets/img/background/expresso_do_sul.png',
+        'assets/img/background/opcao.png'
+    ];
+
+
+    let currentIndex = 0;
+    let isPaused = false;
+
+    function changeBackground() {
+        if (isPaused) return;
+
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+        background.style.backgroundImage = `url('${imageUrls[currentIndex]}')`;
+        counter.textContent = `Imagem ${currentIndex + 1} de ${imageUrls.length}`;
+    }
+    const interval = setInterval(changeBackground, 5000);
+    counter.textContent = `Imagem ${currentIndex + 1} de ${imageUrls.length}`;
+</script>
+
+    <script>
+
+        const textContainer = document.querySelector('.text-loop-container');
+
+
+        const textItems = [
+            "Movemos Pessoas",
+            "Conduzimos com confiança",
+            "Fazemos nossos destinos",
+            "Amanhã melhor que hoje",
+            "Lucratividade é o nosso pavimento",
+            "Simplicidade é o nosso combustível"
+        ];
+
+
+        let currentIndexx = 0;
+        const transitionSpeed = 5000; // 3 segundos (ajuste conforme necessário)
+
+
+        function initializeTexts() {
+            textContainer.innerHTML = '';
+
+            textItems.forEach((text, index) => {
+                const textElement = document.createElement('div');
+                textElement.className = 'text-item';
+                textElement.textContent = text;
+
+                if (index === 0) {
+                    textElement.classList.add('active');
+                }
+
+                textContainer.appendChild(textElement);
+            });
+        }
+
+
+        function nextText() {
+            const currentText = document.querySelector('.text-item.active');
+            const nextIndex = (currentIndexx + 1) % textItems.length;
+            const nextTextElement = document.querySelectorAll('.text-item')[nextIndex];
+
+            currentText.classList.add('exiting');
+            currentText.classList.remove('active');
+
+            setTimeout(() => {
+                currentText.classList.remove('exiting');
+                nextTextElement.classList.add('active');
+                currentIndexx = nextIndex;
+            }, 800);
+        }
+
+
+        function initialize() {
+            initializeTexts();
+
+
+            setInterval(nextText, transitionSpeed);
+        }
+
+
+        window.addEventListener('load', initialize);
+    </script>
+
 </body>
 </html>

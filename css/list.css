@@ -72,6 +72,7 @@
 
 .menu__list {
     height: 400px;
+    width: 60%;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -96,7 +97,7 @@
     font-size: 34px;
     font-weight: bolder;
     display: block;
-    padding: 28px 178px;
+    padding: 28px;
     border: 1px solid;
     border-radius: 14px;
     text-align: center;
@@ -138,5 +139,5 @@
 }
 
 .grupojca__wallpaper>img {
-    width: 70%;
+    width: 85%
 }
