@@ -13,7 +13,7 @@ body {
 .one-page {
     position: relative;
     background-repeat:  no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right;
     background-image: url('../assets/img/background/v1001.png');
     height: 100dvh;
@@ -30,14 +30,9 @@ body {
     width: 60%;
     height: 100dvh;
     background: linear-gradient(
-        to right, rgb(255, 255, 255),
-        rgb(240, 240, 240),
-        rgb(255, 255, 255),
-        rgb(255, 255, 255),
-        rgba(255, 255, 255, 0.829),
-        rgba(255, 255, 255, 0.555),
+        to right, rgba(255, 255, 255, 0.868),
+        rgba(255, 253, 253, 0.407),
         rgba(255, 255, 255, 0));
-    /* background-image: linear-gradient(45deg, #ff0 0%, #f0f 100%); */
 }
 .one-page__logo-marcas {
     width: 600px;
@@ -52,13 +47,18 @@ body {
 }
 
 .one-page__menu {
-    width: 500px;
+    width: 55%;
+    height: 66%;
+    display: flex;
     padding: 0px 48px;
     margin-left: 10px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .one-page__titulo {
     color: var(--salmao);
+    text-shadow: 1px 1px 4px #41414196;
     text-align: center;
     font-size: 3.5rem;
     margin: 10px;
@@ -83,13 +83,13 @@ body {
     font-weight: 800;
     text-decoration: none;
     color: #020240;
-    background: white;
+    text-shadow: 1px 1px 4px #72727296;
+    background: #f9f2f2fa;
     text-align: center;
     display: block;
-    padding: 19px 0px;
-    border-bottom: 4px solid var(--azul-magenta);
+    padding: 1.7rem 0rem;
     border-radius: 9px;
-    box-shadow: 2px 3px 10px 6px rgb(217 215 215);
+    box-shadow: 0px 1px 15px 5px rgb(183, 183, 183);
 }
 
 .item-link:hover {
@@ -102,8 +102,8 @@ body {
     background: rgba(37, 37, 37, 0.38);
     border-radius: 8px;
     display: flex;
-    width: 32%;
-    right: 40px;
+    width: 40%;
+    right: 15%;
     bottom: 24px;
     position: absolute;
     height: 80px;

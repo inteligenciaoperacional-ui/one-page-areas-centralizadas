@@ -8,17 +8,18 @@
 }
 
 .btn-home {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .inteligencia {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100dvh;
     overflow: hidden;
 }
 
 .inteligencia__menu {
+    margin: 0px 1.8rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@
 }
 
 .inteligencia__titulo {
-    font-size: 62px;
+    font-size: 3.3rem;
     color: var(--salmao);
 }
 
@@ -72,7 +73,7 @@
 
 .menu__list {
     height: 400px;
-    width: 60%;
+    width: 65%;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -129,15 +130,16 @@
 .icon_io {
     position: absolute;
     right: 24px;
-    bottom: 34px;
+    bottom: 14px;
 }
 
 .grupojca__wallpaper {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px 5rem;
 }
 
 .grupojca__wallpaper>img {
-    width: 85%
+    width: 85%;
 }
