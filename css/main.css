@@ -95,6 +95,8 @@ body {
 .item-link:hover {
     text-decoration: underline;
     box-shadow: 0px 1px 15px 5px rgb(183, 183, 183);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
 }
 
 

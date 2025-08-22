@@ -22,8 +22,6 @@
     margin: 0.5rem;
     box-shadow: 1px 1px 9px 3px #b9b7b7;
     background-color: var(--gelo);
-    position: fixed;
-    z-index: 1000;
     width: 60px;
 }
 
@@ -38,8 +36,8 @@
 }
 
 .column {
-    margin-left: 80px;
-    margin-right: 2vw;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -85,7 +83,7 @@
 }
 
 .indicadores__titulo {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.0rem);
     font-weight: 400;
     text-align: center;
     color: #333;
@@ -111,7 +109,7 @@
 
 .indicadores__template:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Media Queries para desktop específicos - 4 colunas */
@@ -120,28 +118,28 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2.5rem;
     }
-
+    
     .column {
-        margin-left: 80px;
-        margin-right: 3vw;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0 2rem;
     }
 }
 
 @media (min-width: 1440px) {
     .column {
-        margin-left: 4%;
+        margin-left: 90px;
         margin-right: auto;
-        /* margin-left: auto; */
+        margin-left: auto;
         padding: 0 3rem;
         max-width: 1600px;
     }
-
+    
     .container__flex {
         grid-template-columns: repeat(4, 1fr);
-        gap: 3rem;
+        gap: 2rem 3rem;
     }
-
+    
     .indicadores__link {
         height: 180px;
     }
@@ -152,16 +150,16 @@
         max-width: 1800px;
         padding: 0 4rem;
     }
-
+    
     .container__flex {
         grid-template-columns: repeat(4, 1fr);
         gap: 3.5rem;
     }
-
+    
     .indicadores__link {
         height: 200px;
     }
-
+    
     .barra__vertical {
         width: 70px;
         padding: 1.5rem 0.5rem;
@@ -266,13 +264,13 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-
+    
     .column {
         margin-left: 80px;
         margin-right: 2vw;
         padding-bottom: 1rem;
     }
-
+    
     .barra__vertical {
         position: fixed;
         flex-direction: column;
