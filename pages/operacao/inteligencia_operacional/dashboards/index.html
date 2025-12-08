@@ -40,6 +40,11 @@
                 <img class="logo-marca__jca" src="../../../../assets/img/logo_JCA_preto.png" alt="">
             </header>
 
+            <!-- ===== NOVO: CAMPO DE BUSCA ===== -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar indicador...">
+            </div>
+
             <section class="container__flex">
 
                 <div class="indicadores__layout ">
@@ -259,6 +264,36 @@
             </section>
         </div>
     </div>
+
+<!-- ===== SCRIPT DA BUSCA ===== -->
+<script>
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
+        const items = document.querySelectorAll(".indicadores__layout");
+
+        let matches = 0;
+
+        items.forEach(item => {
+            const title = item.querySelector(".indicadores__titulo").textContent.toLowerCase();
+
+            if (title.indexOf(filter) > -1) {
+                item.style.display = "";
+                matches++;
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        // Se NÃO houve nenhum match → mostrar tudo novamente
+        if (matches === 0) {
+            items.forEach(item => {
+                item.style.display = "";
+            });
+        }
+    });
+</script>
 
 </body>
 
